@@ -1,6 +1,6 @@
 PROPs <-
 function(X, dummy=TRUE, pos=NULL){
-  if (dummy == T){
+  if (dummy == TRUE){
     X = as.matrix(X[,c(pos)])
     salida = (colMeans(X))*100
   } else {

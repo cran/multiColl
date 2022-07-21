@@ -4,12 +4,13 @@
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{Collinearity detection in a linear regression model}
 \description{The function collects all existing measures to detect worrying multicollinearity  in the package \code{multiCol}.}
-\usage{multiCol(X, dummy = FALSE, pos = NULL)}
+\usage{multiCol(X, dummy = FALSE, pos = NULL, graf = TRUE)}
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{X}{A numeric design matrix that should contain more than one regressor (intercept included).}
   \item{dummy}{A logical value that indicates if there are dummy variables in the design matrix \code{X}. By default \code{dummy=FALSE}.}
   \item{pos}{A numeric vector that indicates the position of the dummy variables, if these exist, in the design matrix \code{X}. By default \code{pos=NULL}.}
+  \item{graf}{A logical value that indicates if the dispersion diagram of the variation coefficients of the independent variables is represented against its variance inflation factor. By default \code{graf=TRUE}.}
 }
 
 \value{

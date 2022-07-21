@@ -7,7 +7,7 @@
 The functions collects all the measure to detect near worrying multicollinearity existing in the package \code{multiCol}. In adddition, it provides the estimations by ordinary least squares (OLS) of the multiple linear regession model and the variations in the estimations of the coefficients as a consequence of changes in the observed data.
 }
 \usage{
-multiColLM(y, X, dummy = FALSE, pos1 = NULL, n, mu, dv, tol = 0.01, pos2 = NULL)
+multiColLM(y, X, dummy=FALSE, pos1=NULL, n, mu, dv, tol=0.01, pos2=NULL, graf=TRUE)
 } 
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -20,6 +20,7 @@ multiColLM(y, X, dummy = FALSE, pos1 = NULL, n, mu, dv, tol = 0.01, pos2 = NULL)
   \item{dv}{Any real positive number.}
   \item{tol}{A value between 0 and 1. By default \code{tol=0.01}.}
   \item{pos2}{A numeric vector that indicates the position of the independent variables to disturb once you eliminate in \code{data} the dependent variable and the intercept. By default \code{pos=NULL}.}
+  \item{graf}{A logical value that indicates if the dispersion diagram of the variation coefficients of the independent variables is represented against its variance inflation factor. By default \code{graf=TRUE}.}
 }
 
 \value{

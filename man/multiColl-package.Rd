@@ -16,6 +16,8 @@
   Román Salmerón Gómez (University of Granada), Catalina García García (University of Granada) and José García García (University of Almería).
 }
 \references{
-  \code{multiColl}: An R Package for Detecting Multicollinearity. Working paper.
+  R. Salmerón, C.B. García and J. García (2021). A guide to using the R package \code{multiColl} for detecting multicollinearity. Computational Economics, 57, 529-536.
+  
+  R. Salmerón, C.B. García and J. García (2022). The \code{multiColl} package versus other existing packages in R to detect multicollinearity. Computational Economics, 60, 439-450.
 }
  
