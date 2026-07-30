@@ -1,16 +1,21 @@
-VIF <-
-function(X, dummy=FALSE, pos=NULL){
-  X = as.matrix(X)
-  if (dim(X)[2] == 2){
-   salida = "At least 3 independent variables are needed (including the intercept)"
-  } else {
-    x = as.matrix(X[,-1])
-    vifs = diag(solve(cor(x)))
-    if (dummy == TRUE){
-      salida = vifs[-(pos-1)]
-    } else {
-      salida = vifs
-    }
+VIF <- function(X, dummy=FALSE, pos=NULL) {
+  X <- as.matrix(X)
+  if (ncol(X) == 2) {
+    return("At least 3 independent variables are needed (including the intercept)")
   }
-  return(salida)
+  x <- X[, -1, drop = FALSE]
+  vifs <- tryCatch(
+    diag(solve(cor(x))),
+    error = function(e) {
+      message("System exactly/computationally singular. Modify the design matrix before running the code.")
+      return(NULL)
+    }
+  )
+  if(!is.null(vifs)) {
+    if (dummy) {
+      vifs[-(pos - 1)]
+    } else {
+      vifs
+    }  
+  }
 }
